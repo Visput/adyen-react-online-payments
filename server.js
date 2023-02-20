@@ -4,6 +4,7 @@ const dotenv = require("dotenv");
 const morgan = require("morgan");
 const { uuid } = require("uuidv4");
 const { Client, Config, CheckoutAPI, hmacValidator } = require("@adyen/api-library");
+const { CreateCheckoutSessionRequest } = require("@adyen/api-library/lib/src/typings/checkout/createCheckoutSessionRequest");
 // init app
 const app = express();
 // setup request logging
@@ -75,7 +76,8 @@ app.post("/api/sessions", async (req, res) => {
       lineItems: [
         {quantity: 1, amountIncludingTax: 500 , description: "Sunglasses"},
         {quantity: 1, amountIncludingTax: 500 , description: "Headphones"}
-      ] 
+      ],
+      shopperInteraction: CreateCheckoutSessionRequest.ShopperInteractionEnum.Ecommerce
     });
 
     // save transaction in memory
