@@ -82,7 +82,7 @@ app.post("/api/sessions", async (req, res) => {
 
     // save transaction in memory
     paymentStore[orderRef] = {
-      amount: { currency: "EUR", value: 1000 },
+      amount: { currency: "USD", value: 1000 },
       reference: orderRef,
     };
 
