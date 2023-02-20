@@ -11,6 +11,7 @@ export const slice = createSlice({
       storePaymentMethod: true,
       shopperInteraction: "Ecommerce",
       recurringProcessingModel: "UnscheduledCardOnFile",
+      additionalData: {"authorisationType": "PreAuth"},
       paymentMethodsConfiguration: {
         ideal: {
           showImage: true,
