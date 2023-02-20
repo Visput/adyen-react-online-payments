@@ -9,13 +9,15 @@ export const slice = createSlice({
     paymentDataStoreRes: null,
     config: {
       storePaymentMethod: true,
+      shopperInteraction: "Ecommerce",
+      recurringProcessingModel: "UnscheduledCardOnFile",
       paymentMethodsConfiguration: {
         ideal: {
           showImage: true,
         },
         card: {
-          hasHolderName: true,
-          holderNameRequired: true,
+          hasHolderName: false,
+          holderNameRequired: false,
           name: "Credit or debit card",
           amount: {
             value: 1000, // $10 in minor units
