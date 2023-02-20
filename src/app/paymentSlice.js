@@ -12,6 +12,7 @@ export const slice = createSlice({
       shopperInteraction: "Ecommerce",
       recurringProcessingModel: "UnscheduledCardOnFile",
       additionalData: {"authorisationType": "PreAuth"},
+      shopperReference: "VladWebTest1",
       paymentMethodsConfiguration: {
         ideal: {
           showImage: true,

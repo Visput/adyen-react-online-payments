@@ -77,7 +77,8 @@ app.post("/api/sessions", async (req, res) => {
         {quantity: 1, amountIncludingTax: 500 , description: "Sunglasses"},
         {quantity: 1, amountIncludingTax: 500 , description: "Headphones"}
       ],
-      shopperInteraction: CreateCheckoutSessionRequest.ShopperInteractionEnum.Ecommerce
+      shopperInteraction: CreateCheckoutSessionRequest.ShopperInteractionEnum.Ecommerce,
+      shopperReference: "VladWebTest1"
     });
 
     // save transaction in memory
