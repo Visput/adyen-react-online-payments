@@ -20,7 +20,7 @@ export const slice = createSlice({
           hasHolderName: true,
           holderNameRequired: true,
           billingAddressRequired: true,
-          billingAddressRequiredFields: ['postalCode'],
+          billingAddressRequiredFields: ['postalCode', 'country'],
           name: "Credit or debit card",
           amount: {
             value: 1000, // $10 in minor units
